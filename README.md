@@ -1,1 +1,1 @@
-# SMOTracker_aaai2026
+# SMOTracker
