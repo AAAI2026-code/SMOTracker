@@ -1,1 +1,0 @@
-CUDA_VISIBLE_DEVICES=0 python3 tools/train_net.py --config-file ./configs/bee/bagtricks_S50.yml MODEL.DEVICE "cuda:0"
