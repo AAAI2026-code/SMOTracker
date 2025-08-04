@@ -1,0 +1,4 @@
+# ninja log v5
+0	326	1743575363391320249	/home/king/PycharmProjects/TOPICTrack_main/external/grounding_dino/GroundingDINO/build/temp.linux-x86_64-cpython-310/home/king/PycharmProjects/TOPICTrack_main/external/grounding_dino/GroundingDINO/groundingdino/models/GroundingDINO/csrc/cuda_version.o	1cc6a5a3fbf8c90b
+0	2797	1743575365859425660	/home/king/PycharmProjects/TOPICTrack_main/external/grounding_dino/GroundingDINO/build/temp.linux-x86_64-cpython-310/home/king/PycharmProjects/TOPICTrack_main/external/grounding_dino/GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cpu.o	f400ddcc55e3f251
+1	8991	1743575372051690106	/home/king/PycharmProjects/TOPICTrack_main/external/grounding_dino/GroundingDINO/build/temp.linux-x86_64-cpython-310/home/king/PycharmProjects/TOPICTrack_main/external/grounding_dino/GroundingDINO/groundingdino/models/GroundingDINO/csrc/vision.o	67c00aa9531ac22d
