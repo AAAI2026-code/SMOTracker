@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+capstone.egg-info/PKG-INFO
+capstone.egg-info/SOURCES.txt
+capstone.egg-info/dependency_links.txt
+capstone.egg-info/top_level.txt
+external/__init__.py
