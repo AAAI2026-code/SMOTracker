@@ -170,6 +170,10 @@ class OCSort(object):
         if output_results is None:
             return np.empty((0, 5))
         self.frame_count=frame_idx
+        if len(self.inference_state["obj_ids"]) > 0:
+            self.max_id = max(self.max_id, max(self.inference_state["obj_ids"]))
+        else:
+            pass
 
         dets_one, dets_second = self.extract_detections(
             output_results, img_tensor, img_numpy, tag)
@@ -182,7 +186,6 @@ class OCSort(object):
         
         ret= self.sam2_assign_cascade(dets_one, dets_one_embs,
                                   dets_second, dets_second_embs, metric, two_round_off)
-        self.max_id=max(self.inference_state["obj_ids"])
         return ret
 
     def sam2_level_matching(self, depth,
