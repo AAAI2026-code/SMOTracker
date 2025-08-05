@@ -1,0 +1,1 @@
+python3 demo.py --exp_name mva_test --dataset MVA --test_dataset
