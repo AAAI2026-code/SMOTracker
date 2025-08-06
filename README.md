@@ -11,15 +11,15 @@ Existing multi-object tracking (MOT) methods typically follow a tracking-by-dete
 </p>
 
 ## Tracking performance
-The comparsion video.
+The comparison video
 
 https://github.com/user-attachments/assets/d680ea9a-3e0b-451a-9505-11e0abebbf4c
 
-G-SMOTracker video.
+G-SMOTracker video
 
 https://github.com/user-attachments/assets/c832a017-3f2b-4fea-9203-3c0622e1a220
 
-Y-SMOTracker video.
+Y-SMOTracker video
 
 https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
 
@@ -72,8 +72,9 @@ checkpoint.
 ## Installation
 
 1. Run `python path_initialize.py` .
-2. Install `ffmpeg` into system, check the [download webpage](https://ffmpeg.org/download.html).
-3. Install the environment of `SAM2` and `Grounding-DINO`. For 'Grounding-DINO' installation, after clone, get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu` and go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, and back to the path `GroundingDINO`, run `python setup.py build install`, wait for the successful compiling.
+2. Install `ffmpeg` into system, refer to the [download webpage](https://ffmpeg.org/download.html).
+3. Install the environment of `SAM2` and `Grounding-DINO`. 
+   * For 'Grounding-DINO' installation, after clone, if met problem about compling, get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu` and go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, and back to the path `GroundingDINO`, run `python setup.py build install`, wait for the successful compiling.
 4. Download
 [YOLOV10-x checkpoint](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
 trained by us, 
@@ -81,6 +82,7 @@ trained by us,
 , and
 [Grounding-DINO checkpoint](https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth)
 to the `weights` directory.
+5. Run `pip install -r requirements.txt`.
 
 
 
@@ -92,3 +94,11 @@ in `buffer/video`.
 * To run Y-SMOTracker, run `python Y-SMOTracker_run.py`
 
 
+## Other discussion
+https://github.com/user-attachments/assets/a336d874-db6d-4ad2-8173-bcb6b81a97b5
+
+As shown in the video from Grounded SAM2 model, we notice that it can only do multiple objects tracking
+starting from the first frame and unable to detect new targets in later frames. Also, Grounded SAM2 is
+for small objects like UAVs not efficient, in our test video, it can only detect the UAVs after 1000 frames,
+which video is with 1159 frames. Comparing to this, G-SMOTracker and Y-SMOTracker can detect UAVs in early frames and
+detect new objects in late frames. As conclusion, the Grounded SAM2 is actually not comparable with our methods. 

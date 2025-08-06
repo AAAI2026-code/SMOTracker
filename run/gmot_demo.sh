@@ -1,1 +1,0 @@
-python3 demo.py --exp_name gmot_test --dataset gmot --test_dataset

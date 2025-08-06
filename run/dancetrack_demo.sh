@@ -1,1 +1,0 @@
-python3 demo.py --exp_name dance_test --dataset dance --test_dataset
