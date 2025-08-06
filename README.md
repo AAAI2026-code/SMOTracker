@@ -15,10 +15,15 @@ Existing multi-object tracking (MOT) methods typically follow a tracking-by-dete
 
 ## Tracking performance
 The following are our Results summary video
+
 https://github.com/user-attachments/assets/d680ea9a-3e0b-451a-9505-11e0abebbf4c
+
 The G-SMOTracker result in high resolution
+
 https://github.com/user-attachments/assets/c832a017-3f2b-4fea-9203-3c0622e1a220
+
 The Y-SMOTracker result in high resolution
+
 https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
 ### Results on 3 benchmark test datasets
 #### Results of dataset DOHA Anti-UAV
