@@ -97,8 +97,6 @@ in `buffer/video`.
 ## Other discussion
 https://github.com/user-attachments/assets/a336d874-db6d-4ad2-8173-bcb6b81a97b5
 
-As shown in the video from Grounded SAM2 model, we notice that it can only do multiple objects tracking
-starting from the first frame and unable to detect new targets in later frames. Also, Grounded SAM2 is
-for small objects like UAVs not efficient, in our test video, it can only detect the UAVs after 1000 frames,
-which video is with 1159 frames. Comparing to this, G-SMOTracker and Y-SMOTracker can detect UAVs in early frames and
-detect new objects in late frames. As conclusion, the Grounded SAM2 is actually not comparable with our methods. 
+As demonstrated in the video using the Grounded SAM2 model, we observed that it can only perform multi-object tracking starting from the first frame and is unable to detect new targets that appear in subsequent frames. Furthermore, Grounded SAM2 is not efficient for detecting small objects such as UAVs. In our test video, which contains 1,159 frames, it only detected UAVs after frame 1,000.
+
+In contrast, both G-SMOTracker and Y-SMOTracker are capable of detecting UAVs in the early frames and identifying new objects in later frames. Therefore, we conclude that Grounded SAM2 is not directly comparable to our proposed methods in terms of performance and adaptability.
