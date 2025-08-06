@@ -6,10 +6,15 @@
 Existing multi-object tracking (MOT) methods typically follow a tracking-by-detection paradigm with Kalman filters. Detected bounding boxes are fed into the Kalman filter’s observation equation to update tracklet locations, and similarity metrics are used to associate detections with tracklets. However, for small objects with low visual quality, detectors often fail to produce reliable results in consecutive frames or only yield low-confidence detections. Missing detections interrupt the observation update, and when the motion trajectories of small objects change, their tracks are prone to being lost. Camera zooming or movement further exacerbates this issue. To address these challenges, we propose SMOTracker, a SAM2-based multi-object tracker designed for small objects. Specifically, we replace the Kalman filter with the Segment Anything Model 2 (SAM2) and adopt a masklet-to-detection association strategy. Predicting object positions via SAM2 alleviates the limitations of Kalman filters, while assigning identities (IDs) to masklets instead of detections mitigates track loss under detection failures. Since SAM2 tracks objects sequentially, completing one object before starting another, and cannot be directly combined with detection-based approaches, we segment the video into multiple clips while maintaining a shared SAM2 memory bank. We further introduce cross-clip ID assignment by associating SAM2 masklets with detector outputs, enabling SMOTracker to operate effectively in an online streaming setting. Extensive experiments on multiple small-object tracking benchmarks demonstrate that SMOTracker achieves robust performance across diverse tracking scenarios.
 
 ### Model structure
-<p align="center"><img src="ReadmeFigs/structure.jpg" width="500"/></p>
-<video width="800" height="600" controls>
-    <source src="ReadmeFigs/All_methods_comparison_summary.mp4" type="video/mp4">
-</video>
+<p align="center"><img src="assets/structure.jpg" width="500"/></p>
+
+http://github.com/AAAI2026-code/SMOTracker/blob/main/ReadmeFigs/All_methods_comparision_summary.mp4
+
+[//]: # (<video width="800" height="600" controls>)
+
+[//]: # (    <source src="assets/All_methods_comparison_summary.mp4" type="video/mp4">)
+
+[//]: # (</video>)
 
 ## Tracking performance
 ### Results on 3 benchmark test datasets
