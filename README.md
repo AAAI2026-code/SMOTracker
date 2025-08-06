@@ -66,17 +66,20 @@ https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
 | Y-SMOTracker | 53.098 | 55.931 | 32  | 16   | 5890  |
 
 ## Installation
-You can download the above 
-[Test video](https://drive.google.com/file/d/1TOussiXyNZ6JY7xVqgI9s3r5TJS_NPev/view?usp=drive_link)
-and by us trained
+You should download
 [YOLOV10-x model](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
-also you need the
+trained by us, 
 [SAM2.1 sam2.1_hiera_large checkpoints](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt)
-and put check points under the `weights` dir.
+, and
+[Grounding-DINO checkpoint](https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth)
+. Put them in the `weights` directory.
 
-Other wise, install the environment of `SAM2` and `TOPICTrack` .
+Also, install the environment of `SAM2` and `Grounding-DINO`. 
 
 ## Running
 
 ## Testing
+You can download the
+[Test video](https://drive.google.com/file/d/1TOussiXyNZ6JY7xVqgI9s3r5TJS_NPev/view?usp=drive_link)
+.
 

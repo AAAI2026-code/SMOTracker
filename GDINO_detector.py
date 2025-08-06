@@ -17,7 +17,7 @@ def GDINO_detector(
         ):
     # Create annotation and results folders
     model = load_model("GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py",
-                    "GroundingDINO/weights/groundingdino_swint_ogc.pth")
+                    "weights/groundingdino_swint_ogc.pth")
     # Single image detection and annotation
     image_name=single_image_path.split("/")[-1].split(".")[0]
     img_figure=cv2.imread(single_image_path)
