@@ -199,13 +199,9 @@ def process_run(data_dir):
         video_path = os.path.join(data_dir_path, video_dir, "img1")
         yolo_sma2_run(video_path, video_dir, data_dir)
 
-
-
 if __name__ == '__main__':
-    torch.cuda.set_device("cuda:0")
-    yolo_sma2_run("data/bird_drone/images/0","bird_drone_gdino","bird_drone_gdino")
-    # yolo_sma2_run("data/multiple_objects","multiple_objects","multiple_objects")
-    # yolo_sma2_run("data/check_data", "check")
+    extract_frames("buffer/video/bird_drone_original.mp4","data/bird_drone")
+    yolo_sma2_run("data/bird_drone","bird_drone_gdino","bird_drone_gdino")
 
     # dir_list=[
     #    "MOT17_Anti-UAV(DUT)",

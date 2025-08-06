@@ -66,20 +66,25 @@ https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
 | Y-SMOTracker | 53.098 | 55.931 | 32  | 16   | 5890  |
 
 ## Installation
-You should download
-[YOLOV10-x model](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
+
+1. Run `python path_initialize.py` .
+2. Install `ffmpeg` into system.
+2. Install the environment of `SAM2` and `Grounding-DINO`.
+3. Download
+[YOLOV10-x checkpoint](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
 trained by us, 
-[SAM2.1 sam2.1_hiera_large checkpoints](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt)
+[sam2.1_hiera_large checkpoints](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt)
 , and
 [Grounding-DINO checkpoint](https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth)
-. Put them in the `weights` directory.
+to the `weights` directory.
 
-Also, install the environment of `SAM2` and `Grounding-DINO`. 
 
-## Running
 
-## Testing
+## Run the demo
 You can download the
 [Test video](https://drive.google.com/file/d/1TOussiXyNZ6JY7xVqgI9s3r5TJS_NPev/view?usp=drive_link)
-.
+in `buffer/video`.
+* To run G-SMOTracker, run `python G-SMOTracker_run.py`
+* To run Y-SMOTracker, run `python Y-SMOTracker_run.py`
+
 

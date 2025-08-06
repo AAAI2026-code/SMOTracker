@@ -1,5 +1,6 @@
 /data/
 /external/weights/
 /GroundingDINO/
-/prediction_record/
 /cache/
+/weights/
+/prediction_record/

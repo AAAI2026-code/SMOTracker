@@ -197,7 +197,8 @@ def process_run(data_dir):
 
 if __name__ == '__main__':
     torch.cuda.set_device("gpu")
-    yolo_sma2_run("data/bird_drone/images/0","bird_drone_test","bird_drone_test")
+    extract_frames("buffer/video/bird_drone_original.mp4","data/bird_drone")
+    yolo_sma2_run("data/bird_drone","bird_drone_test","bird_drone_test")
     # yolo_sma2_run("data/multiple_objects","multiple_objects","multiple_objects")
     # yolo_sma2_run("data/check_data", "check")
 
