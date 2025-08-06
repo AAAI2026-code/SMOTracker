@@ -74,6 +74,8 @@ also you need the
 [SAM2.1 sam2.1_hiera_large checkpoints](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt)
 and put check points under the `weights` dir.
 
+Other wise, install the environment of `SAM2` and `TOPICTrack` .
+
 ## Running
 
 ## Testing
