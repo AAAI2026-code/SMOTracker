@@ -13,11 +13,7 @@ https://github.com/user-attachments/assets/d680ea9a-3e0b-451a-9505-11e0abebbf4c
 https://github.com/user-attachments/assets/c832a017-3f2b-4fea-9203-3c0622e1a220
 
 https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
-[//]: # (<video width="800" height="600" controls>)
 
-[//]: # (    <source src="assets/All_methods_comparison_summary.mp4" type="video/mp4">)
-
-[//]: # (</video>)
 
 ## Tracking performance
 ### Results on 3 benchmark test datasets
