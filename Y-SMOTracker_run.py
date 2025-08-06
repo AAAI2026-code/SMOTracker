@@ -12,14 +12,12 @@ import time
 import torchvision.transforms as transforms
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
-
-
 def yolo_sma2_run(video_dir,video_name,buffer_name):
         start_time=time.time()
         # `video_dir` a directory of JPEG frames with filenames like `<frame_index>.jpg`
         video_height,video_width=0,0
         # Initialize yolo detector
-        yolo_model_name="last.pt"
+        yolo_model_name="yolov10x_drone.pt"
         yolo_model_path=os.path.join("weights",yolo_model_name)
         yolo_detector=Detector(yolo_model_path)
         # initialize frame buffer path
@@ -27,8 +25,6 @@ def yolo_sma2_run(video_dir,video_name,buffer_name):
         frame_output_dir=os.path.join("buffer","video_images",f"{buffer_name}_frames")
         clear_dir_content(frame_buffer_dir)
         clear_dir_content(frame_output_dir)
-        # store the last frame tracking result from the latest propagate section
-        last_frame_bank=[]
         # scan all the JPEG frame names in this directory
         frame_names = [
             p for p in os.listdir(video_dir)
@@ -200,11 +196,11 @@ def process_run(data_dir):
 
 
 if __name__ == '__main__':
-
+    torch.cuda.set_device("gpu")
     yolo_sma2_run("data/bird_drone/images/0","bird_drone_test","bird_drone_test")
     # yolo_sma2_run("data/multiple_objects","multiple_objects","multiple_objects")
     # yolo_sma2_run("data/check_data", "check")
-    # torch.cuda.set_device("cuda:0")
+
     # dir_list=[
     #    "MOT17_Anti-UAV(DUT)" ,
     #    "MOT17_AntiUAV410",

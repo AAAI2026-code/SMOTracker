@@ -1,0 +1,1 @@
+store SAM2 and yolo weights here

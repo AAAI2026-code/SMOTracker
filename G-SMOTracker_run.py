@@ -16,8 +16,6 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 def yolo_sma2_run(video_dir,video_name,buffer_name):
         start_time=time.time()
         # `video_dir` a directory of JPEG frames with filenames like `<frame_index>.jpg`
-        # video_name="bird_drone"
-        # video_dir = "data/bird_drone/images/0"
         video_height,video_width=0,0
         # Initialize yolo detector
         # initialize frame buffer path
@@ -25,8 +23,6 @@ def yolo_sma2_run(video_dir,video_name,buffer_name):
         frame_output_dir=os.path.join("buffer","video_images",f"{buffer_name}_frames")
         clear_dir_content(frame_buffer_dir)
         clear_dir_content(frame_output_dir)
-        # store the last frame tracking result from the latest propagate section
-        last_frame_bank=[]
         # scan all the JPEG frame names in this directory
         frame_names = [
             p for p in os.listdir(video_dir)

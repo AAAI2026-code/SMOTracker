@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: torchreid
 Version: 1.4.0
 Summary: A library for deep learning person re-ID in PyTorch
@@ -23,6 +23,14 @@ Requires-Dist: flake8
 Requires-Dist: yapf
 Requires-Dist: isort==4.3.21
 Requires-Dist: imageio
+Dynamic: author
+Dynamic: description
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: summary
 
 Torchreid
 ===========

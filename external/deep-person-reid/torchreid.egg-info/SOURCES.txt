@@ -7,6 +7,7 @@ torchreid.egg-info/SOURCES.txt
 torchreid.egg-info/dependency_links.txt
 torchreid.egg-info/requires.txt
 torchreid.egg-info/top_level.txt
+torchreid/metrics/rank_cylib/rank_cy.c
 torchreid/data/__init__.py
 torchreid/data/datamanager.py
 torchreid/data/sampler.py
