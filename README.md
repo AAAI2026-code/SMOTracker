@@ -8,7 +8,7 @@ Existing multi-object tracking (MOT) methods typically follow a tracking-by-dete
 ### Model structure
 <p align="center"><img src="assets/structure.jpg" width="500"/></p>
 
-http://github.com/AAAI2026-code/SMOTracker/blob/main/ReadmeFigs/All_methods_comparision_summary.mp4
+[All_methods_comparision_summary.mp4](assets/All_methods_comparision_summary.mp4)
 
 [//]: # (<video width="800" height="600" controls>)
 
