@@ -8,6 +8,8 @@ Existing multi-object tracking (MOT) methods typically follow a tracking-by-dete
 ### Model structure
 <p align="center"><img src="assets/structure.jpg" width="500"/></p>
 
+https://github.com/user-attachments/assets/9d368ca7-2e9b-4fed-9da0-d2efbf620d88
+
 [All_methods_comparision_summary.mp4](assets/All_methods_comparision_summary.mp4)
 
 [//]: # (<video width="800" height="600" controls>)
