@@ -10,9 +10,6 @@ Existing multi-object tracking (MOT) methods typically follow a tracking-by-dete
 <img src="assets/structure.jpg" width="500"/>
 </p>
 
-
-
-
 ## Tracking performance
 The following are our Results summary video
 
@@ -73,4 +70,11 @@ You can download the above
 [Test video](https://drive.google.com/file/d/1TOussiXyNZ6JY7xVqgI9s3r5TJS_NPev/view?usp=drive_link)
 and by us trained
 [YOLOV10-x model](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
+also you need the
+[SAM2.1 sam2.1_hiera_large checkpoints](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt)
+and put them under the `weights` dir.
+
+## Running
+
+## Testing
 
