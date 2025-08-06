@@ -22,7 +22,11 @@ https://github.com/user-attachments/assets/c832a017-3f2b-4fea-9203-3c0622e1a220
 Y-SMOTracker video.
 
 https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
+
 ### Results on 3 benchmark test datasets
+We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as test platform, this repository
+includes 8 tracking methods, which are all 2-stage methods. The detector is with same yolov10-x
+checkpoint.
 #### Results of dataset DOHA Anti-UAV
 | Method       | HOTA   | IDF1   | IDs  | IDSW | IDFN  |
 |--------------|--------|--------|------|------|-------|
@@ -69,8 +73,8 @@ https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
 
 1. Run `python path_initialize.py` .
 2. Install `ffmpeg` into system, check the [download webpage](https://ffmpeg.org/download.html).
-2. Install the environment of `SAM2` and `Grounding-DINO`.
-3. Download
+3. Install the environment of `SAM2` and `Grounding-DINO`. For 'Grounding-DINO' installation, after clone, get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu` and go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, and back to the path `GroundingDINO`, run `python setup.py build install`, wait for the successful compiling.
+4. Download
 [YOLOV10-x checkpoint](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
 trained by us, 
 [sam2.1_hiera_large checkpoints](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt)
