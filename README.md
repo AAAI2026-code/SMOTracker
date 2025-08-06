@@ -72,7 +72,7 @@ and by us trained
 [YOLOV10-x model](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
 also you need the
 [SAM2.1 sam2.1_hiera_large checkpoints](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt)
-and put them under the `weights` dir.
+and put check points under the `weights` dir.
 
 ## Running
 
