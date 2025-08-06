@@ -68,7 +68,7 @@ https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
 ## Installation
 
 1. Run `python path_initialize.py` .
-2. Install `ffmpeg` into system.
+2. Install `ffmpeg` into system, check the [download webpage](https://ffmpeg.org/download.html).
 2. Install the environment of `SAM2` and `Grounding-DINO`.
 3. Download
 [YOLOV10-x checkpoint](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
