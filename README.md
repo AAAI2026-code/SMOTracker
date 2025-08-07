@@ -74,7 +74,7 @@ checkpoint.
 1. Run `python path_initialize.py` .
 2. Install `ffmpeg` into system, refer to the [download webpage](https://ffmpeg.org/download.html).
 3. Install the environment of `SAM2` and `Grounding-DINO`. 
-   * For 'Grounding-DINO' installation, after clone, if met problem about compling, get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu` and go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, and back to the path `GroundingDINO`, run `python setup.py build install`, wait for the successful compiling.
+   * For 'Grounding-DINO' installation, after clone, if there is a problem of importing `"_C"`, get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu` and go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, and back to the path `GroundingDINO`, run `python setup.py build install`, wait for the successful compiling of `"_C"`.
 4. Download
 [YOLOV10-x checkpoint](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
 trained by us, 
@@ -90,13 +90,14 @@ to the `weights` directory.
 You can download the
 [Test video](https://drive.google.com/file/d/1TOussiXyNZ6JY7xVqgI9s3r5TJS_NPev/view?usp=drive_link)
 in `buffer/video`.
-* To run G-SMOTracker, run `python G-SMOTracker_run.py`
-* To run Y-SMOTracker, run `python Y-SMOTracker_run.py`
+* To run G-SMOTracker, run `python G_SMOTracker_run.py`
+* To run Y-SMOTracker, run `python Y_SMOTracker_run.py`
 
 
-## Other discussion
+## Discussion
 https://github.com/user-attachments/assets/a336d874-db6d-4ad2-8173-bcb6b81a97b5
 
-As demonstrated in the video using the Grounded SAM2 model, we observed that it can only perform multi-object tracking starting from the first frame and is unable to detect new targets that appear in subsequent frames. Furthermore, Grounded SAM2 is not efficient for detecting small objects such as UAVs. In our test video, which contains 1,159 frames, it only detected UAVs after frame 1,000.
+The video is the result of the Grounded SAM2 model. As shown in the video and described in the related Internet, Grounded SAM2 can only track the objects from the first frame and is unable to add new objects that appear in subsequent frames. Furthermore, Grounded SAM2 is not efficient for tracking small objects such as UAVs.  Our original test video contains 1,159 frames. If we use Grounded SAM2 to process the entire video, it cannot track any objects due to its inability to detect objects in the first frame. Therefore, we take out the last clip of the video. Then we use Grounded SAM2 to process it. From the video results shown above, it can be seen that since there are only four tracked objects in the first frame, only these four objects are tracked in the video.
+SAMRUAI, like Grounded SAM2, can only track objects annotated in the first frame.
 
-In contrast, both G-SMOTracker and Y-SMOTracker are capable of detecting UAVs in the early frames and identifying new objects in later frames. Therefore, we conclude that Grounded SAM2 is not directly comparable to our proposed methods in terms of performance and adaptability.
+In contrast, both G-SMOTracker and Y-SMOTracker are capable of tracking UAVs in the all frames and add new IDs if there are new objects in later frames. Therefore, Grounded SAM2 and SAMRUAI are not directly comparable to our methods in terms of performance metrics of multiple object tracking .
