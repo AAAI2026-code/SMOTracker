@@ -72,7 +72,7 @@ We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as comparison platform
 1. Run `python path_initialize.py` .
 2. Install `ffmpeg` into system referring to the [download webpage](https://ffmpeg.org/download.html).
 3. Install the environments of `SAM2` and `Grounding-DINO`. 
-   * For `Grounding-DINO` installation, after clone, if there is a problem of importing `"_C"`, get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu` and go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, and back to the path `GroundingDINO`, run `python setup.py build install`, wait for the successful compiling of `"_C"`.
+   * For `Grounding-DINO` installation, after clone, if there is a problem of importing `"_C"`, you can get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu`, go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, back to the path `GroundingDINO`, run `python setup.py build install`, and wait for the successful compiling of `"_C"`.
 4. Download
 [YOLOV10-x checkpoint](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
 trained by us, 
