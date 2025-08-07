@@ -5,12 +5,12 @@
 ## Abstract
 Existing multi-object tracking (MOT) methods typically follow a tracking-by-detection paradigm with Kalman filters. Detected bounding boxes are fed into the Kalman filter’s observation equation to update tracklet locations, and similarity metrics are used to associate detections with tracklets. However, for small objects with low visual quality, detectors often fail to produce reliable results in consecutive frames or only yield low-confidence detections. Missing detections interrupt the observation update, and when the motion trajectories of small objects change, their tracks are prone to being lost. Camera zooming or movement further exacerbates this issue. To address these challenges, we propose SMOTracker, a SAM2-based multi-object tracker designed for small objects. Specifically, we replace the Kalman filter with the Segment Anything Model 2 (SAM2) and adopt a masklet-to-detection association strategy. Predicting object positions via SAM2 alleviates the limitations of Kalman filters, while assigning identities (IDs) to masklets instead of detections mitigates track loss under detection failures. Since SAM2 tracks objects sequentially, completing one object before starting another, and cannot be directly combined with detection-based approaches, we segment the video into multiple clips while maintaining a shared SAM2 memory bank. We further introduce cross-clip ID assignment by associating SAM2 masklets with detector outputs, enabling SMOTracker to operate effectively in an online streaming setting. Extensive experiments on multiple small-object tracking benchmarks demonstrate that SMOTracker achieves robust performance across diverse tracking scenarios.
 
-### Model structure
+### Model Overview
 <p align="center">
 <img src="assets/structure.jpg" width="500"/>
 </p>
 
-## Tracking performance
+## Tracking Performance
 The comparison video
 
 https://github.com/user-attachments/assets/d680ea9a-3e0b-451a-9505-11e0abebbf4c
@@ -23,10 +23,8 @@ Y-SMOTracker video
 
 https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
 
-### Results on 3 benchmark test datasets
-We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as test platform, this repository
-includes 8 tracking methods, which are all 2-stage methods. The detector is with same yolov10-x
-checkpoint.
+### Evaluation Results
+We use BoxMOT as comparison platform and take 3 datasets for evaluation. This repository includes 8 multiple object tracking methods. Their detector is with the same yolov10-x checkpoint which can be downloaded in the Installation section . Our Y-SMOTracker also uses this yolov10-x checkpoint.  
 #### Results of dataset DOHA Anti-UAV
 | Method       | HOTA   | IDF1   | IDs  | IDSW | IDFN  |
 |--------------|--------|--------|------|------|-------|
@@ -72,9 +70,9 @@ checkpoint.
 ## Installation
 
 1. Run `python path_initialize.py` .
-2. Install `ffmpeg` into system, refer to the [download webpage](https://ffmpeg.org/download.html).
-3. Install the environment of `SAM2` and `Grounding-DINO`. 
-   * For 'Grounding-DINO' installation, after clone, if there is a problem of importing `"_C"`, get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu` and go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, and back to the path `GroundingDINO`, run `python setup.py build install`, wait for the successful compiling of `"_C"`.
+2. Install `ffmpeg` into system referring to the [download webpage](https://ffmpeg.org/download.html).
+3. Install the environments of `SAM2` and `Grounding-DINO`. 
+   * For `Grounding-DINO` installation, after clone, if there is a problem of importing `"_C"`, get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu` and go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, and back to the path `GroundingDINO`, run `python setup.py build install`, wait for the successful compiling of `"_C"`.
 4. Download
 [YOLOV10-x checkpoint](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
 trained by us, 
@@ -100,4 +98,9 @@ https://github.com/user-attachments/assets/a336d874-db6d-4ad2-8173-bcb6b81a97b5
 The video is the result of the Grounded SAM2 model. As shown in the video and described in the related Internet, Grounded SAM2 can only track the objects from the first frame and is unable to add new objects that appear in subsequent frames. Furthermore, Grounded SAM2 is not efficient for tracking small objects such as UAVs.  Our original test video contains 1,159 frames. If we use Grounded SAM2 to process the entire video, it cannot track any objects due to its inability to detect objects in the first frame. Therefore, we take out the last clip of the video. Then we use Grounded SAM2 to process it. From the video results shown above, it can be seen that since there are only four tracked objects in the first frame, only these four objects are tracked in the video.
 SAMRUAI, like Grounded SAM2, can only track objects annotated in the first frame.
 
-In contrast, both G-SMOTracker and Y-SMOTracker are capable of tracking UAVs in the all frames and add new IDs if there are new objects in later frames. Therefore, Grounded SAM2 and SAMRUAI are not directly comparable to our methods in terms of performance metrics of multiple object tracking .
+In contrast, both G-SMOTracker and Y-SMOTracker are capable of tracking UAVs in the all frames and add new IDs if there are new objects in later frames. Therefore, Grounded SAM2 and SAMRUAI are not directly comparable to our methods in terms of performance metrics of multiple object tracking. 
+
+## Related work
+[SAM2](https://github.com/facebookresearch/sam2): Segment anything model.
+
+[SAMURAI](https://github.com/yangchris11/samurai): An improvement  of SAM2.
