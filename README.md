@@ -24,7 +24,7 @@ Y-SMOTracker video
 https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
 
 ### Evaluation Results
-We use BoxMOT as comparison platform and take 3 datasets for evaluation. This repository includes 8 multiple object tracking methods. Their detector is with the same yolov10-x checkpoint which can be downloaded in the Installation section . Our Y-SMOTracker also uses this yolov10-x checkpoint.  
+We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as comparison platform and take 3 datasets for evaluation. This repository includes 8 multiple object tracking methods. Their detector is with the same yolov10-x checkpoint which can be downloaded in the Installation section . Our Y-SMOTracker also uses this yolov10-x checkpoint.  
 #### Results of dataset DOHA Anti-UAV
 | Method           | HOTA          | IDF1          | IDs       | IDSW      | IDFN        |
 |------------------|---------------|---------------|-----------|-----------|-------------|
@@ -101,6 +101,8 @@ SAMRUAI, like Grounded SAM2, can only track objects annotated in the first frame
 In contrast, both G-SMOTracker and Y-SMOTracker are capable of tracking UAVs in the all frames and add new IDs if there are new objects in later frames. Therefore, Grounded SAM2 and SAMRUAI are not directly comparable to our methods in terms of performance metrics of multiple object tracking. 
 
 ## Related work
-[SAM2](https://github.com/facebookresearch/sam2): Segment anything model, can track targets in video by segmentation, but unable to add and track new targets.
+[SAM2](https://github.com/facebookresearch/sam2): Segment anything model, can track objects in video by segmentation, but unable to add and track new objects.
 
 [SAMURAI](https://github.com/yangchris11/samurai): An improvement of SAM2, which enhance the ability of tracking objects after occlusion, but similar to SAM2, unable to track multiple objects and new objects.
+
+[Grounded SAM2](https://github.com/IDEA-Research/Grounded-SAM-2): A project combines SAM2 and Grounding-DINO, but only able to detect objects at the first frame and then use SAM2 to do the tracking, new objects detection in the later frames is almost impossible and is inefficient for small objects. 
