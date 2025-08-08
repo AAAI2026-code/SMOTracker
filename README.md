@@ -101,8 +101,8 @@ SAMRUAI, like Grounded SAM2, can only track objects annotated in the first frame
 In contrast, both G-SMOTracker and Y-SMOTracker are capable of tracking UAVs in the all frames and add new IDs if there are new objects in later frames. Therefore, Grounded SAM2 and SAMRUAI are not directly comparable to our methods in terms of performance metrics of multiple object tracking. 
 
 ## Related work
-[SAM2](https://github.com/facebookresearch/sam2): Segment anything model, can track objects in video by segmentation, but unable to add and track new objects.
+[SAM2](https://github.com/facebookresearch/sam2): The Segment Anything Model (SAM) facilitates object tracking in video via segmentation. Notably, it lacks the capability to incorporate and track newly emerging objects during processing.
 
-[SAMURAI](https://github.com/yangchris11/samurai): An improvement of SAM2, which enhance the ability of tracking objects after occlusion, but similar to SAM2, unable to track multiple objects and new objects.
+[SAMURAI](https://github.com/yangchris11/samurai): An enhanced variant of SAM2 significantly improves object tracking robustness following occlusion events. Notably, this model retains two key limitations of SAM2: the inability to track multiple objects concurrently and the incapability to track newly appearing objects.
 
-[Grounded SAM2](https://github.com/IDEA-Research/Grounded-SAM-2): A project combines SAM2 and Grounding-DINO, but only able to detect objects at the first frame and then use SAM2 to do the tracking, new objects detection in the later frames is almost impossible and is inefficient for small objects. 
+[Grounded SAM2](https://github.com/IDEA-Research/Grounded-SAM-2): This project integrates SAM2 with Grounding-DINO to achieve video object tracking through a hybrid approach. However, the system exhibits three primary limitations: (1) Object detection is confined exclusively to the initial frame via Grounding-DINO; (2) Subsequent frames lack dynamic object detection capabilities, preventing identification of newly appearing entities; (3) Tracking performance proves notably inefficient for small objects due to inherent segmentation constraints.
