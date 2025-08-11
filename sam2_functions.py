@@ -250,12 +250,12 @@ def show_mask(mask, ax, obj_id=None, random_color=False,draw_bbox=True,draw_mask
         cmap = plt.get_cmap("tab10")
         cmap_idx = 0 if obj_id is None else obj_id
         color = np.array([*cmap(cmap_idx)[:3], 0.6])
-    #
+    # draw mask to the plot
     if draw_mask:
         h, w = mask.shape[-2:]
         mask_image = mask.reshape(h, w, 1) * color.reshape(1, 1, -1)
         ax.imshow(mask_image)
-    #
+    # draw bbox to the plot
     if draw_bbox:
         pos = np.argwhere(mask)
         if pos.size > 0:
@@ -302,8 +302,6 @@ def extract_frames(video_path, output_dir, fps=None):
 
     # 执行
     ffmpeg.run(stream)
-
-
 
 if __name__ == '__main__':
     create_video_with_ffmpeg()

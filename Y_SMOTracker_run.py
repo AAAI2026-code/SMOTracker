@@ -10,7 +10,6 @@ from trackers.ocsort_embedding.sam2_association import *
 import dataset
 import time
 import torchvision.transforms as transforms
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
 def yolo_sma2_run(video_dir,video_name,buffer_name):
         start_time=time.time()
@@ -196,7 +195,7 @@ def process_run(data_dir):
 
 
 if __name__ == '__main__':
-    torch.cuda.set_device("gpu")
+    torch.cuda.set_device("cuda")
     extract_frames("buffer/video/bird_drone_original.mp4","data/bird_drone")
     yolo_sma2_run("data/bird_drone","bird_drone_test","bird_drone_test")
     # yolo_sma2_run("data/multiple_objects","multiple_objects","multiple_objects")

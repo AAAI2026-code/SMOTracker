@@ -11,7 +11,6 @@ from GDINO_detector import GDINO_detector
 import dataset
 import torchvision.transforms as transforms
 import time
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
 def yolo_sma2_run(video_dir,video_name,buffer_name):
         start_time=time.time()
@@ -200,6 +199,7 @@ def process_run(data_dir):
         yolo_sma2_run(video_path, video_dir, data_dir)
 
 if __name__ == '__main__':
+    torch.cuda.set_device("cuda")
     extract_frames("buffer/video/bird_drone_original.mp4","data/bird_drone")
     yolo_sma2_run("data/bird_drone","bird_drone_gdino","bird_drone_gdino")
 
