@@ -13,7 +13,7 @@ Existing multi-object tracking (MOT) methods typically follow a tracking-by-dete
 ## Tracking Performance
 The comparison video
 
-https://github.com/user-attachments/assets/d680ea9a-3e0b-451a-9505-11e0abebbf4c
+https://github.com/user-attachments/assets/daa1b7f0-ec60-4b62-90f7-bd727dc657eb
 
 G-SMOTracker video
 
