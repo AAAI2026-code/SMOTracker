@@ -114,6 +114,8 @@ In contrast, both G-SMOTracker and Y-SMOTracker are capable of tracking UAVs in 
 [Grounded SAM2](https://github.com/IDEA-Research/Grounded-SAM-2): This project integrates SAM2 with Grounding-DINO to achieve video object tracking through a hybrid approach. However, the system exhibits three primary limitations: (1) Object detection is confined exclusively to the initial frame via Grounding-DINO; (2) Subsequent frames lack dynamic object detection capabilities, preventing identification of newly appearing entities; (3) Tracking performance proves notably inefficient for small objects due to inherent segmentation constraints.
 
 ## Other test videos
+Here we present more video result from other videos in our dataset.
+
 Multiple objects in sky
 
 https://github.com/user-attachments/assets/8d5e9823-264a-4d03-aa9f-d490cb7390f0
