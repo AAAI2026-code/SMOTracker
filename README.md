@@ -120,7 +120,7 @@ https://github.com/user-attachments/assets/8d5e9823-264a-4d03-aa9f-d490cb7390f0
 
 Urban scenario
 
-https://github.com/user-attachments/assets/8d5e9823-264a-4d03-aa9f-d490cb7390f0
+https://github.com/user-attachments/assets/4a77fb33-10da-41d6-9e79-23367e6531bd
 
 Sea scenario
 
