@@ -115,13 +115,17 @@ In contrast, both G-SMOTracker and Y-SMOTracker are capable of tracking UAVs in 
 
 ## Other test videos
 Multiple objects in sky
+
 https://github.com/user-attachments/assets/8d5e9823-264a-4d03-aa9f-d490cb7390f0
 
 Urban scenario
+
 https://github.com/user-attachments/assets/8d5e9823-264a-4d03-aa9f-d490cb7390f0
 
 Sea scenario
+
 https://github.com/user-attachments/assets/fdbfd5c8-b07e-4873-ba3c-ed506c70a47d
 
 Multiple objects above sea
+
 https://github.com/user-attachments/assets/04661d6b-7624-4c13-be1b-77dc0a1f1cbf
