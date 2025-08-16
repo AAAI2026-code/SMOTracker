@@ -15,6 +15,10 @@ The comparison video
 
 https://github.com/user-attachments/assets/daa1b7f0-ec60-4b62-90f7-bd727dc657eb
 
+TOPICTrack video
+
+https://github.com/user-attachments/assets/c8896041-69b4-40f7-9621-69b5eef0ddc0
+
 G-SMOTracker video
 
 https://github.com/user-attachments/assets/c832a017-3f2b-4fea-9203-3c0622e1a220
@@ -22,6 +26,8 @@ https://github.com/user-attachments/assets/c832a017-3f2b-4fea-9203-3c0622e1a220
 Y-SMOTracker video
 
 https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
+
+
 
 ### Evaluation Results
 We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as comparison platform and take 3 datasets for evaluation. This repository includes 8 multiple object tracking methods. Their detector is with the same yolov10-x checkpoint which can be downloaded in the Installation section . Our Y-SMOTracker also uses this yolov10-x checkpoint.  
@@ -106,3 +112,16 @@ In contrast, both G-SMOTracker and Y-SMOTracker are capable of tracking UAVs in 
 [SAMURAI](https://github.com/yangchris11/samurai): An enhanced variant of SAM2 significantly improves object tracking robustness following occlusion events. Notably, this model retains two key limitations of SAM2: the inability to track multiple objects concurrently and the incapability to track newly appearing objects.
 
 [Grounded SAM2](https://github.com/IDEA-Research/Grounded-SAM-2): This project integrates SAM2 with Grounding-DINO to achieve video object tracking through a hybrid approach. However, the system exhibits three primary limitations: (1) Object detection is confined exclusively to the initial frame via Grounding-DINO; (2) Subsequent frames lack dynamic object detection capabilities, preventing identification of newly appearing entities; (3) Tracking performance proves notably inefficient for small objects due to inherent segmentation constraints.
+
+## Other test videos
+Multiple objects in sky
+https://github.com/user-attachments/assets/8d5e9823-264a-4d03-aa9f-d490cb7390f0
+
+Urban scenario
+https://github.com/user-attachments/assets/8d5e9823-264a-4d03-aa9f-d490cb7390f0
+
+Sea scenario
+https://github.com/user-attachments/assets/fdbfd5c8-b07e-4873-ba3c-ed506c70a47d
+
+Multiple objects above sea
+https://github.com/user-attachments/assets/04661d6b-7624-4c13-be1b-77dc0a1f1cbf
