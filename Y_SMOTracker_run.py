@@ -35,7 +35,7 @@ def yolo_sma2_run(video_dir,video_name,buffer_name):
         model_cfg = "configs/sam2.1/sam2.1_hiera_l.yaml"
         predictor = build_sam2_video_predictor(model_cfg, sam2_checkpoint)
         frame_buffer_list=[]
-        frame_buffer_size=9 # in sam2 the usual size for memory is 8, 8*N as base
+        frame_buffer_size=13 # in sam2 the usual size for memory is 8, 8*N as base
         video_segments = {}
         obj_count=0
         frame_bias=0

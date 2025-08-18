@@ -42,63 +42,65 @@ We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as comparison platform
 | Imprassoc                     | 33.412        | 48.158        | 1459      | 1620      | 17250       |
 | Boosttrack                    | 11.215        | 7.629         | 67        | 48        | 22680       |
 | Boosttrack++                  | 13.127        | 8.569         | 75        | 54        | 22026       |
-| <font color="red"> TOPICTrack |               |               |           |           |             |
-| **G-SMOTracker**              | <u>61.109</u> | <u>65.685</u> | <u>48</u> | **36**    | <u>6243</u> |
-| **Y-SMOTracker**              | **75.109**    | **77.591**    | **32**    | <u>40</u> | **3957**    |
+| <font color="red"> TOPICTrack | 23.453        | 32.927        | **30**    | 45        | 7204        |
+| **G-SMOTracker**              | <u>61.109</u> | <u>65.685</u> | 48        | **36**    | <u>6243</u> |
+| **Y-SMOTracker**              | **75.109**    | **77.591**    | <u>32</u> | <u>40</u> | **3957**    |
 
 #### Results of dataset Anti-UAV
-| Method                        | HOTA                     | IDF1                     | IDs                   | IDSW                  | IDFN                    |
-|-------------------------------|--------------------------|--------------------------|-----------------------|-----------------------|-------------------------|
-| DeepOCSORT                    | 55.481                   | <u>54.934</u>            | 579                   | 577                   | 23229                   |
-| BoTSORT                       | 54.981                   | 52.957                   | 652                   | 656                   | 23521                   |
-| StrongSORT                    | 43.359                   | 38.838                   | 809                   | 1004                  | 30486                   |
-| OCSORT                        | 52.060                   | 49.696                   | 713                   | 729                   | 26002                   |
-| ByteTrack                     | <u>55.575</u>            | 53.842                   | 700                   | 683                   | 23138                   |
-| Imprassoc                     | 39.971                   | 31.895                   | 1137                  | 1181                  | 33187                   |
-| Boosttrack                    | 24.092                   | 19.705                   | 450                   | 426                   | 42202                   |
-| Boosttrack++                  | 24.176                   | 19.803                   | 452                   | 425                   | 42157                   |
-| <font color="red">TOPICTrack  | <font color="red">27.216 | <font color="red">21.136 | <font color="red">449 | <font color="red">414 | <font color="red">41655 |
-| **G-SMOTracker**              | 43.286                   | 53.582                   | <u>150</u>            | **21**                | <u>13038</u>            |
-| **Y-SMOTracker**              | **61.578**               | **81.571**               | **94**                | <u>33</u>             | **7981**                |
+| Method           | HOTA          | IDF1          | IDs        | IDSW      | IDFN         |
+|------------------|---------------|---------------|------------|-----------|--------------|
+| DeepOCSORT       | 55.481        | <u>54.934</u> | 579        | 577       | 23229        |
+| BoTSORT          | 54.981        | 52.957        | 652        | 656       | 23521        |
+| StrongSORT       | 43.359        | 38.838        | 809        | 1004      | 30486        |
+| OCSORT           | 52.060        | 49.696        | 713        | 729       | 26002        |
+| ByteTrack        | <u>55.575</u> | 53.842        | 700        | 683       | 23138        |
+| Imprassoc        | 39.971        | 31.895        | 1137       | 1181      | 33187        |
+| Boosttrack       | 24.092        | 19.705        | 450        | 426       | 42202        |
+| Boosttrack++     | 24.176        | 19.803        | 452        | 425       | 42157        |
+| TOPICTrack       | 27.216        | 21.136        | 449        | 414       | 41655        |
+| **G-SMOTracker** | 43.286        | 53.582        | <u>150</u> | **21**    | <u>13038</u> |
+| **Y-SMOTracker** | **61.578**    | **81.571**    | **94**     | <u>33</u> | **7981**     |
 
 #### Results of dataset DUT Anti-UAV
-| Method                       | HOTA                     | IDF1                     | IDs                  | IDSW                 | IDFN                    |
-|------------------------------|--------------------------|--------------------------|----------------------|----------------------|-------------------------|
-| DeepOCSORT                   | <u>42.401</u>            | <u>46.262</u>            | 62                   | 47                   | 8171                    |
-| BoTSORT                      | 40.822                   | 41.737                   | 60                   | 45                   | 8506                    |
-| StrongSORT                   | 39.379                   | 41.241                   | 87                   | 76                   | 8686                    |
-| OCSORT                       | 41.078                   | 44.894                   | 82                   | 68                   | 8437                    |
-| ByteTrack                    | 39.934                   | 41.128                   | 76                   | 63                   | 8563                    |
-| Imprassoc                    | 32.791                   | 30.892                   | 268                  | 243                  | 9720                    |
-| Boosttrack                   | 12.698                   | 9.4363                   | **31**               | 21                   | 12428                   |
-| Boosttrack++                 | 13.75                    | 10.473                   | 34                   | 24                   | 12345                   |
-| <font color="red">TOPICTrack | <font color="red">16.904 | <font color="red">18.642 | <font color="red">38 | <font color="red">24 | <font color="red">11673 |
-| **G-SMOTracker**             | 36.566                   | 39.531                   | 33                   | **8**                | <u>7557</u>             |
-| **Y-SMOTracker**             | **53.098**               | **55.931**               | <u>32</u>            | <u>16</u>            | **5890**                |
+| Method           | HOTA          | IDF1          | IDs       | IDSW      | IDFN        |
+|------------------|---------------|---------------|-----------|-----------|-------------|
+| DeepOCSORT       | <u>42.401</u> | <u>46.262</u> | 62        | 47        | 8171        |
+| BoTSORT          | 40.822        | 41.737        | 60        | 45        | 8506        |
+| StrongSORT       | 39.379        | 41.241        | 87        | 76        | 8686        |
+| OCSORT           | 41.078        | 44.894        | 82        | 68        | 8437        |
+| ByteTrack        | 39.934        | 41.128        | 76        | 63        | 8563        |
+| Imprassoc        | 32.791        | 30.892        | 268       | 243       | 9720        |
+| Boosttrack       | 12.698        | 9.4363        | **31**    | 21        | 12428       |
+| Boosttrack++     | 13.75         | 10.473        | 34        | 24        | 12345       |
+| TOPICTrack       | 16.904        | 18.642        | 38        | 24        | 11673       |
+| **G-SMOTracker** | 36.566        | 39.531        | 33        | **8**     | <u>7557</u> |
+| **Y-SMOTracker** | **53.098**    | **55.931**    | <u>32</u> | <u>16</u> | **5890**    |
 
 ## Installation
 
-1. Run `python path_initialize.py` .
-2. Install `ffmpeg` into system referring to the [download webpage](https://ffmpeg.org/download.html).
-3. Install the environments of `SAM2` and `Grounding-DINO`. 
+1. Run `python path_initialize.py` 
+2. Install env by `pip install -r requirements.txt`
+3. Install `ffmpeg` into system referring to the [download webpage](https://ffmpeg.org/download.html).
+4. Install the environments of `SAM2` as individual project outside this project, and `Grounding-DINO` under the `/SMOTracker`.
    * For `Grounding-DINO` installation, after clone, if there is a problem of importing `"_C"`, you can get into `GroundingDINO/groundingdino/models/GroundingDINO/csrc/MsDeformAttn/ms_deform_attn_cuda.cu`, go to line `65` and `135`, modify `value.type()` to `value.scalar_type()`, back to the path `GroundingDINO`, run `python setup.py build install`, and wait for the successful compiling of `"_C"`.
-4. Download
+5. Download
 [YOLOV10-x checkpoint](https://drive.google.com/file/d/134OtEnjhvGCF06FPIHzIyElAAHSZEkPM/view?usp=drive_link)
 trained by us, 
 [sam2.1_hiera_large checkpoints](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt)
 , and
 [Grounding-DINO checkpoint](https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth)
 to the `weights` directory.
-5. Run `pip install -r requirements.txt`.
+6. Download [bee24_AGW.pth](https://drive.google.com/file/d/1OJRRERPh0uOv8sbEhDIofGFScigT1Y-w/view?usp=sharing) from [TOPICTrack](https://github.com/holmescao/TOPICTrack) to `external/weights`.
 
 
 
 ## Run the demo
 You can download the
 [Test video](https://drive.google.com/file/d/1TOussiXyNZ6JY7xVqgI9s3r5TJS_NPev/view?usp=drive_link)
-in `buffer/video`.
+to `buffer/video`.
 * To run G-SMOTracker, run `python G_SMOTracker_run.py`
 * To run Y-SMOTracker, run `python Y_SMOTracker_run.py`
+* The output video is at `buffer/video_outpu`
 
 
 ## Discussion

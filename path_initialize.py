@@ -3,9 +3,10 @@ import shutil
 
 
 PATH_CHECK_LIST={
-    "buffer":["video_images","video_output","videos"],
-    "data":[],
-    "weights":[]
+    "buffer": ["video_images","video_output","videos"],
+    "data": [],
+    "weights": [],
+    "external": ["weights"]
 }
 
 if __name__ == '__main__':
