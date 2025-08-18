@@ -32,19 +32,19 @@ https://github.com/user-attachments/assets/145433d5-7de0-4e37-97ac-1da309933971
 ### Evaluation Results
 We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as comparison platform and take 3 datasets for evaluation. This repository includes 8 multiple object tracking methods. Their detector is with the same yolov10-x checkpoint which can be downloaded in the Installation section . Our Y-SMOTracker also uses this yolov10-x checkpoint.  
 #### Results of dataset DOHA Anti-UAV
-| Method                        | HOTA          | IDF1          | IDs       | IDSW      | IDFN        |
-|-------------------------------|---------------|---------------|-----------|-----------|-------------|
-| DeepOCSORT                    | 38.553        | 35.799        | 487       | 486       | 17262       |
-| BoTSORT                       | 39.386        | 39.326        | 847       | 827       | 17268       |
-| StrongSORT                    | 33.295        | 40.15         | 811       | 832       | 17268       |
-| OCSORT                        | 35.843        | 46.3          | 128       | 120       | 17262       |
-| ByteTrack                     | 38.223        | 49.156        | 147       | 139       | 17220       |
-| Imprassoc                     | 33.412        | 48.158        | 1459      | 1620      | 17250       |
-| Boosttrack                    | 11.215        | 7.629         | 67        | 48        | 22680       |
-| Boosttrack++                  | 13.127        | 8.569         | 75        | 54        | 22026       |
-| <font color="red"> TOPICTrack | 23.453        | 32.927        | **30**    | 45        | 7204        |
-| **G-SMOTracker**              | <u>61.109</u> | <u>65.685</u> | 48        | **36**    | <u>6243</u> |
-| **Y-SMOTracker**              | **75.109**    | **77.591**    | <u>32</u> | <u>40</u> | **3957**    |
+| Method           | HOTA          | IDF1          | IDs       | IDSW      | IDFN        |
+|------------------|---------------|---------------|-----------|-----------|-------------|
+| DeepOCSORT       | 38.553        | 35.799        | 487       | 486       | 17262       |
+| BoTSORT          | 39.386        | 39.326        | 847       | 827       | 17268       |
+| StrongSORT       | 33.295        | 40.15         | 811       | 832       | 17268       |
+| OCSORT           | 35.843        | 46.3          | 128       | 120       | 17262       |
+| ByteTrack        | 38.223        | 49.156        | 147       | 139       | 17220       |
+| Imprassoc        | 33.412        | 48.158        | 1459      | 1620      | 17250       |
+| Boosttrack       | 11.215        | 7.629         | 67        | 48        | 22680       |
+| Boosttrack++     | 13.127        | 8.569         | 75        | 54        | 22026       |
+| OPICTrack        | 23.453        | 32.927        | **30**    | 45        | 7204        |
+| **G-SMOTracker** | <u>61.109</u> | <u>65.685</u> | 48        | **36**    | <u>6243</u> |
+| **Y-SMOTracker** | **75.109**    | **77.591**    | <u>32</u> | <u>40</u> | **3957**    |
 
 #### Results of dataset Anti-UAV
 | Method           | HOTA          | IDF1          | IDs        | IDSW      | IDFN         |
