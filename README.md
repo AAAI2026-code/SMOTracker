@@ -56,6 +56,7 @@ We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as comparison platform
 | Imprassoc        | 39.971        | 31.895        | 1137       | 1181      | 33187        |
 | Boosttrack       | 24.092        | 19.705        | 450        | 426       | 42202        |
 | Boosttrack++     | 24.176        | 19.803        | 452        | 425       | 42157        |
+| TOPICTrack       | 27.216        | 21.136        | 449        | 414       | 41655        |
 | **G-SMOTracker** | 43.286        | 53.582        | <u>150</u> | **21**    | <u>13038</u> |
 | **Y-SMOTracker** | **61.578**    | **81.571**    | **94**     | <u>33</u> | **7981**     |
 
@@ -70,6 +71,7 @@ We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as comparison platform
 | Imprassoc        | 32.791        | 30.892        | 268       | 243       | 9720        |
 | Boosttrack       | 12.698        | 9.4363        | **31**    | 21        | 12428       |
 | Boosttrack++     | 13.75         | 10.473        | 34        | 24        | 12345       |
+| TOPICTrack       | 16.904        | 18.642        | 38        | 24        | 11673       |
 | **G-SMOTracker** | 36.566        | 39.531        | 33        | **8**     | <u>7557</u> |
 | **Y-SMOTracker** | **53.098**    | **55.931**    | <u>32</u> | <u>16</u> | **5890**    |
 
