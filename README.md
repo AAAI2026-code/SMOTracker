@@ -97,7 +97,7 @@ to the `weights` directory.
 ## Run the demo
 You can download the
 [Test video](https://drive.google.com/file/d/1TOussiXyNZ6JY7xVqgI9s3r5TJS_NPev/view?usp=drive_link)
-to `buffer/video`.
+and place it at e.g., `buffer/video`.
 * To run G-SMOTracker, run `python G_SMOTracker_run.py`
 * To run Y-SMOTracker, run `python Y_SMOTracker_run.py`
 * The output video is at `buffer/video_outpu`
