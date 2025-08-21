@@ -42,7 +42,7 @@ We use [BoxMOT](https://github.com/mikel-brostrom/boxmot) as comparison platform
 | Imprassoc        | 33.412        | 48.158        | 1459      | 1620      | 17250       |
 | Boosttrack       | 11.215        | 7.629         | 67        | 48        | 22680       |
 | Boosttrack++     | 13.127        | 8.569         | 75        | 54        | 22026       |
-| OPICTrack        | 23.453        | 32.927        | **30**    | 45        | 7204        |
+| TOPICTrack       | 23.453        | 32.927        | **30**    | 45        | 7204        |
 | **G-SMOTracker** | <u>61.109</u> | <u>65.685</u> | 48        | **36**    | <u>6243</u> |
 | **Y-SMOTracker** | **75.109**    | **77.591**    | <u>32</u> | <u>40</u> | **3957**    |
 
